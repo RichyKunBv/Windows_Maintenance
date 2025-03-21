@@ -1,9 +1,25 @@
 # Windows_Maintenance
+
 Windows and hard drive maintenance
 
+Funcionalidades
 
--Este codigo lo encontre en facebook, yo solo le hice unos pequeños cambios como no tener que pulsar ninguna tecla para continuar (automatizado) y que tambien limpie el disco D y no solo el C
--I found this code on Facebook, I only made a few small changes like not having to press any key to continue (automated) and also cleaning the D drive and not just the C drive
+Ejecuta SFC para reparar archivos del sistema.
 
+Usa DISM para verificar y restaurar la imagen del sistema.
 
-Thanks to whom it may concern
+Desfragmenta los discos C y D.
+
+Escanea en busca de errores en los discos.
+
+Restablece configuraciones de red y firewall.
+
+Limpia archivos temporales y otros datos innecesarios.
+
+Crea un punto de restauración.
+
+Verifica el estado del disco.
+
+Revisa procesos sospechosos.
+
+Muestra programas que se inician con Windows.
