@@ -1,4 +1,4 @@
-## 🧰 Windows Maintenance - RichyKunBv v2.0
+## 🧰 Windows Maintenance - RichyKunBv
 
 **Repositorio:** `Windows_Maintenance`
 **Autor:** [RichyKunBv](https://github.com/RichyKunBv)
@@ -57,8 +57,3 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 ---
 
-### 📎 Enlaces
-
-🔗 Repositorio: [https://github.com/RichyKunBv/Windows\_Maintenance](https://github.com/RichyKunBv/Windows_Maintenance)
-
----
