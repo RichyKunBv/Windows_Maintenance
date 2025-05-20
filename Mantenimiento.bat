@@ -9,16 +9,16 @@ echo         MANTENIMIENTO DE WINDOWS
 echo ============================================
 echo.
 echo    Editor: RichyKunBv
-echo    Versión: 2.0
-echo    Página: https://github.com/RichyKunBv
+echo    Version: 2.0.1
+echo    Pagina: https://github.com/RichyKunBv
 echo.
-echo 1. Revisión del sistema
-echo 2. Limpieza básica
+echo 1. Revision del sistema
+echo 2. Limpieza basica
 echo 3. Limpieza completa
-echo 4. Análisis completo
+echo 4. Analisis completo
 echo 5. Salir
 echo.
-set /p opcion=Selecciona una opción [1-5]:
+set /p opcion=Selecciona una opcion:
 
 if "%opcion%"=="1" goto REVISION
 if "%opcion%"=="2" goto LIMPIEZA_BASICA
