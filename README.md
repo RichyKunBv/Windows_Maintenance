@@ -1,25 +1,64 @@
-# Windows_Maintenance
+## 🧰 Windows Maintenance - RichyKunBv v2.0
 
-Windows and hard drive maintenance
+**Repositorio:** `Windows_Maintenance`
+**Autor:** [RichyKunBv](https://github.com/RichyKunBv)
+**Archivos incluidos:**
 
-Funcionalidades
+* `Mantenimiento.bat` – script principal
+* `Mantenimiento.exe` – ejecutable para mayor comodidad
 
-Ejecuta SFC para reparar archivos del sistema.
+---
 
-Usa DISM para verificar y restaurar la imagen del sistema.
+### 🖥️ ¿Qué es esto?
 
-Desfragmenta los discos C y D.
+Un script de mantenimiento para Windows que agrupa múltiples herramientas del sistema en un menú interactivo. Ideal para mantener tu PC limpia, rápida y estable sin instalar nada adicional.
 
-Escanea en busca de errores en los discos.
+---
 
-Restablece configuraciones de red y firewall.
+### 🚀 Instrucciones de uso
 
-Limpia archivos temporales y otros datos innecesarios.
+1. Descarga el repositorio.
+2. Ejecuta `Mantenimiento.exe` o `Mantenimiento.bat` como **Administrador**.
+3. Selecciona una opción del menú (1 a 5).
+4. Espera a que finalicen los procesos. Algunos pueden tardar.
 
-Crea un punto de restauración.
+---
 
-Verifica el estado del disco.
+### 📋 Opciones del menú
 
-Revisa procesos sospechosos.
+#### 1. ✅ Revisión del sistema
 
-Muestra programas que se inician con Windows.
+* Ejecuta `sfc /scannow` y DISM para revisar y reparar archivos del sistema.
+
+#### 2. 🔧 Limpieza básica
+
+* Desfragmenta discos duros y revisa el sistema de archivos con `chkdsk`.
+
+#### 3. 🧼 Limpieza completa
+
+* Elimina archivos temporales, reinicia configuración de red, limpia DNS, firewall, arranque y más.
+* Crea un punto de restauración automático por si algo sale mal.
+
+#### 4. 🔍 Análisis completo
+
+* Ejecuta todo lo anterior de forma automatizada: revisión, limpieza básica y profunda.
+
+#### 5. 🚪 Salir
+
+* Cierra el programa y abre el repositorio en GitHub.
+
+---
+
+### ⚠️ Notas
+
+* Usa la opción 3 o 4 al menos una vez al mes para mantener tu sistema sano.
+* No se recomienda usar `defrag` si solo tienes SSD (puedes editar el script para quitarlo).
+* El `.exe` es un wrapper del `.bat`, pensado para facilitar su ejecución en usuarios sin conocimientos técnicos.
+
+---
+
+### 📎 Enlaces
+
+🔗 Repositorio: [https://github.com/RichyKunBv/Windows\_Maintenance](https://github.com/RichyKunBv/Windows_Maintenance)
+
+---
