@@ -1,3 +1,36 @@
+::[Bat To Exe Converter]
+::
+::YAwzoRdxOk+EWAjk
+::fBw5plQjdCyDJGyX8VAjFAtVWAWWAE+1BaAR7ebv/Nawq0MZW/UsR6La07qaIe4S5EbhSZ8u2XRV1sIPA3s=
+::YAwzuBVtJxjWCl3EqQJgSA==
+::ZR4luwNxJguZRRnk
+::Yhs/ulQjdF+5
+::cxAkpRVqdFKZSDk=
+::cBs/ulQjdF+5
+::ZR41oxFsdFKZSDk=
+::eBoioBt6dFKZSDk=
+::cRo6pxp7LAbNWATEpCI=
+::egkzugNsPRvcWATEpCI=
+::dAsiuh18IRvcCxnZtBJQ
+::cRYluBh/LU+EWAnk
+::YxY4rhs+aU+IeA==
+::cxY6rQJ7JhzQF1fEqQJiZksaHWQ=
+::ZQ05rAF9IBncCkqN+0xwdVsGAlTMbQs=
+::ZQ05rAF9IAHYFVzEqQIdKRVASQqLMWK/CKETiA==
+::eg0/rx1wNQPfEVWB+kM9LVsJDGQ=
+::fBEirQZwNQPfEVWB+kM9LVsJDGQ=
+::cRolqwZ3JBvQF1fEqQIYLRhcQ0SBM2X6B7gT+qinvIo=
+::dhA7uBVwLU+EWGut120TaChAWQCLM3ja
+::YQ03rBFzNR3SWATElA==
+::dhAmsQZ3MwfNWATExkszIAJ/WQqgKgs=
+::ZQ0/vhVqMQ3MEVWAtB9wSA==
+::Zg8zqx1/OA3MEVWAtB9wSA==
+::dhA7pRFwIByZRRnk
+::Zh4grVQjdCyDJGyX8VAjFAtVWAWWAE+1BaAR7ebv/Nawq0MZW/UsR6La07qaIe4S5EbhSbss2G5flsIBBR5Wah3laxcxyQ==
+::YB416Ek+ZW8=
+::
+::
+::978f952a14a936cc963da21a135fa983
 @echo off
 title Mantenimiento de Windows - RichyKunBv
 color 0A
@@ -29,7 +62,7 @@ goto MENU
 
 :REVISION
 cls
-echo [1/4] Revisión del sistema: comprobando integridad...
+echo [1/4] Revision del sistema: comprobando integridad...
 sfc /scannow
 
 echo Revisando imagen de Windows...
@@ -40,7 +73,7 @@ goto MENU
 
 :LIMPIEZA_BASICA
 cls
-echo [2/4] Limpieza básica: optimizando discos y checando errores...
+echo [2/4] Limpieza basica: optimizando discos y checando errores...
 defrag C: /O
 defrag D: /O
 
@@ -66,7 +99,7 @@ echo Borrando temporales...
 del /s /q %temp%\*.* 2>nul
 del /s /q C:\Windows\Temp\*.* 2>nul
 
-echo Creando punto de restauración...
+echo Creando punto de restauracion...
 reagentc /info
 reagentc /enable
 wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "Mantenimiento Completo", 100, 7
@@ -75,14 +108,14 @@ echo Verificando procesos y arranque...
 tasklist | findstr /I /C:"malware" /C:"virus"
 wmic startup get caption,command
 
-echo Comprobando estado físico del disco...
+echo Comprobando estado fisico del disco...
 wmic diskdrive get status
 pause
 goto MENU
 
 :ANALISIS_COMPLETO
 cls
-echo [4/4] Análisis completo: ejecutando TODO el mantenimiento...
+echo [4/4] Analisis completo: ejecutando TODO el mantenimiento...
 sfc /scannow
 DISM /Online /Cleanup-Image /CheckHealth
 DISM /Online /Cleanup-Image /RestoreHealth
