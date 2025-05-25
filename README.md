@@ -47,6 +47,8 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 * Cierra el programa y abre el repositorio en GitHub.
 
+![Captura de pantalla 2025-05-25 174803](https://github.com/user-attachments/assets/e16a1b28-60e2-40c4-88fa-bfc252760eb9)
+
 ---
 
 ### ⚠️ Notas
