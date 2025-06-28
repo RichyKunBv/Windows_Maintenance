@@ -4,8 +4,8 @@
 **Autor:** [RichyKunBv](https://github.com/RichyKunBv)
 **Archivos incluidos:**
 
-* `Mantenimiento.bat` – script principal
-* `Mantenimiento.exe` – ejecutable para mayor comodidad
+* `Mantenimiento.bat` – script principal₃
+* `Mantenimiento.exe` – ejecutable para mayor comodidad₃
 
 ---
 
@@ -21,14 +21,16 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 ![Captura de pantalla 2025-06-20 191347](https://github.com/user-attachments/assets/8ab94073-82e5-4c8f-8468-c8b43dbb173a)
 
-2. Ejecuta `Mantenimiento.exe` o `Mantenimiento.bat` como **Administrador**. (OJO en algunos casos va a saltar este mensaje, mi aplicacion es totalmente segura pero no tengo certificacion (es de paga) la muestra como sospechosa pero es totalmente segura)
+2. ₃ Ejecuta `Mantenimiento.exe` o `Mantenimiento.bat` como **Administrador**. (OJO Si ves una alerta de seguridad, pulsa en "Más información" y "Ejecutar", te garantizo que la aplicación es segura)
 ![Captura de pantalla 2025-06-03 171134](https://github.com/user-attachments/assets/bb2ebf9f-cb0d-44e8-ab16-d6dfedcac843)   
-3. Selecciona una opción del menú (1 a 5).
+3. Selecciona una opción del menú (1 a 6).
 4. Espera a que finalicen los procesos. Algunos pueden tardar.
 
 ---
 
 ### 📋 Opciones del menú
+
+![Captura de pantalla 2025-06-27 213431](https://github.com/user-attachments/assets/d5c9e81a-4abb-4372-af5b-b79c635a11cd)
 
 #### 1. ✅ Revisión del sistema
 
@@ -38,12 +40,12 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 * Desfragmenta discos duros y revisa el sistema de archivos con `chkdsk`.
 
-#### 3. 🧼 Limpieza completa
+#### 3. 🧼 Limpieza completa ₁
 
 * Elimina archivos temporales, reinicia configuración de red, limpia DNS, firewall, arranque y más.
 * Crea un punto de restauración automático por si algo sale mal.
 
-#### 4. 🔍 Análisis completo
+#### 4. 🔍 Análisis completo ₁
 
 * Ejecuta todo lo anterior de forma automatizada: revisión, limpieza básica y profunda.
 
@@ -51,15 +53,23 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 * Cierra el programa y abre el repositorio en GitHub.
 
-![Captura de pantalla 2025-05-25 174803](https://github.com/user-attachments/assets/e16a1b28-60e2-40c4-88fa-bfc252760eb9)
+#### 6. Actualizar App. ₄
+
+* La aplicacion se actualiza automaticamente con un simple clic
+
+![Captura de pantalla 2025-06-27 213533](https://github.com/user-attachments/assets/b7d64ef9-a125-4eaa-a7bf-36b0ce1cdb91)
+
+![Captura de pantalla 2025-06-27 213505](https://github.com/user-attachments/assets/e5be7d88-2994-4974-a70c-2f461e37b53b)
+
 
 ---
 
 ### ⚠️ Notas
 
-* Usa la opción 3 o 4 al menos una vez al mes para mantener tu sistema sano.
-* No se recomienda usar `defrag` si solo tienes SSD (puedes editar el script para quitarlo).
-* El `.exe` es un wrapper del `.bat`, pensado para facilitar su ejecución en usuarios sin conocimientos técnicos.
+* ₁ Usa la opción 3 o 4 al menos una vez al mes para mantener tu sistema sano.
+* ₂ No se recomienda usar `defrag` si solo tienes SSD (puedes editar el script para quitarlo).
+* ₃ El `.exe` es una adaptacion del `.bat`, pensado para facilitar su ejecución en usuarios sin conocimientos técnicos.
+* ₄ La opcion 6 necesita obligatoriamente internet para descargar la ultima version disponible en GitHub
 
 ---
 
