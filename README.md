@@ -22,7 +22,9 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 ![Captura de pantalla 2025-06-20 191347](https://github.com/user-attachments/assets/8ab94073-82e5-4c8f-8468-c8b43dbb173a)
 
 2. ₃ Ejecuta `Mantenimiento.exe` o `Mantenimiento.bat` como **Administrador**. (OJO Si ves una alerta de seguridad, pulsa en "Más información" y "Ejecutar", te garantizo que la aplicación es segura)
+
 ![Captura de pantalla 2025-06-03 171134](https://github.com/user-attachments/assets/bb2ebf9f-cb0d-44e8-ab16-d6dfedcac843)   
+
 3. Selecciona una opción del menú (1 a 6).
 4. Espera a que finalicen los procesos. Algunos pueden tardar.
 
