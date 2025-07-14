@@ -32,7 +32,7 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 ### 📋 Opciones del menú
 
-![Captura de pantalla 2025-06-27 213431](https://github.com/user-attachments/assets/d5c9e81a-4abb-4372-af5b-b79c635a11cd)
+<img width="410" height="328" alt="Captura de pantalla 2025-07-13 224212" src="https://github.com/user-attachments/assets/fed0335e-41dc-406e-9fb1-5c0b61466a48" />
 
 #### 1. ✅ Revisión del sistema
 
@@ -59,7 +59,7 @@ Un script de mantenimiento para Windows que agrupa múltiples herramientas del s
 
 * La aplicacion se actualiza automaticamente con un simple clic
 
-![Captura de pantalla 2025-06-27 213533](https://github.com/user-attachments/assets/b7d64ef9-a125-4eaa-a7bf-36b0ce1cdb91)
+<img width="465" height="302" alt="Captura de pantalla 2025-07-13 224253" src="https://github.com/user-attachments/assets/2f08bcde-b68b-4b60-a880-331a700640dc" />
 
 ![Captura de pantalla 2025-06-27 213505](https://github.com/user-attachments/assets/e5be7d88-2994-4974-a70c-2f461e37b53b)
 
