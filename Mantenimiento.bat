@@ -2,6 +2,8 @@
 title Mantenimiento de Windows - RichyKunBv
 color 0A
 
+set "AppVersion=2.1.1"
+
 :MENU
 cls
 echo ============================================
@@ -9,7 +11,7 @@ echo         MANTENIMIENTO DE WINDOWS
 echo ============================================
 echo.
 echo    Editor: RichyKunBv
-echo    Version: 2.1
+echo    Version: %AppVersion%
 echo    Pagina: https://github.com/RichyKunBv
 echo.
 echo 1. Revision del sistema
@@ -120,13 +122,15 @@ goto MENU
 :ACTUALIZAR
 cls
 echo =================================================
-echo      BUSCANDO ACTUALIZACIONES
+echo      BUSCANDO ACTUALIZACIONES PARA EL SCRIPT
 echo =================================================
 echo.
 
 setlocal
 
-REM --- Definición de Variables ---
+set "localVersion=%AppVersion%"
+
+REM --- Variables ---
 set "repoUser=RichyKunBv"
 set "repoName=Windows_Maintenance"
 set "repoURL=https://raw.githubusercontent.com/%repoUser%/%repoName%/main"
@@ -135,9 +139,9 @@ set "scriptFileURL=%repoURL%/Mantenimiento.bat"
 set "tempVersionFile=%temp%\latest_version.txt"
 set "tempNewScriptFile=%temp%\Mantenimiento_new.bat"
 
-REM --- Paso 1: Comprobar la conexión a Internet ---
+REM --- Comprobar Internet ---
 echo [INFO] Comprobando conexion a internet...
-ping -n 1 8.8.8.8 >nul 2>nul
+ping -n 1 8.8.8.8 >nul 2>&1
 if errorlevel 1 (
     echo [ERROR] No se detecto una conexion a internet.
     goto EndUpdate
@@ -145,10 +149,8 @@ if errorlevel 1 (
 echo [OK]   Conexion establecida.
 echo.
 
-REM --- Paso 2: Comparar Versiones ---
-set "localVersion=0"
-if exist "version.txt" set /p localVersion=<version.txt
-echo [INFO] Version actual: %localVersion%
+REM --- Obtener Versiones ---
+echo [INFO] Version actual instalada: %localVersion%
 
 echo [INFO] Obteniendo ultima version desde GitHub...
 powershell -NoProfile -ExecutionPolicy Bypass -Command "try { (New-Object System.Net.WebClient).DownloadFile('%versionFileURL%', '%tempVersionFile%') } catch {}" >nul 2>&1
@@ -162,12 +164,15 @@ set /p latestVersion=<%tempVersionFile%
 echo [INFO] Ultima version disponible: %latestVersion%
 echo.
 
-if "%localVersion%"=="%latestVersion%" (
-    echo [OK]   Ya tienes la ultima version. No se necesita actualizar.
+REM --- COMPARAR VERSIONES ---
+echo [INFO] Comparando versiones...
+powershell -NoProfile -ExecutionPolicy Bypass -Command "if ([Version]'%latestVersion%' -gt [Version]'%localVersion%') { exit 1 } else { exit 0 }"
+if not errorlevel 1 (
+    echo [OK]   Ya tienes la ultima version o una superior.
     goto EndUpdate
 )
 
-echo [!] Se encontro una nueva version!
+echo [!] Se encontro una nueva version mas reciente (%latestVersion%)!
 set /p "doUpdate=Deseas actualizar el script ahora? (S/N): "
 if /i not "%doUpdate%"=="S" (
     echo [INFO] Actualizacion omitida por el usuario.
@@ -176,12 +181,12 @@ if /i not "%doUpdate%"=="S" (
 
 cls
 echo =================================================
-echo      ACTUALIZANDO MANTENIMIENTO WINDOWS
+echo      ACTUALIZANDO SCRIPT...
 echo =================================================
 echo.
 
-REM --- Paso 3: Descargar el Nuevo Script ---
-echo [INFO] Descargando script v%latestVersion%...
+REM --- Descargar el Nuevo Script ---
+echo [+] Descargando script [%latestVersion%]...
 powershell -NoProfile -ExecutionPolicy Bypass -Command "try { (New-Object System.Net.WebClient).DownloadFile('%scriptFileURL%', '%tempNewScriptFile%') } catch {}" >nul 2>&1
 
 if not exist "%tempNewScriptFile%" (
@@ -193,15 +198,18 @@ echo.
 echo [INFO] La aplicacion se reiniciara para finalizar la actualizacion...
 timeout /t 3 /nobreak >nul
 
-REM --- Paso 4: Crear y Ejecutar el Script Ayudante ---
+REM --- Script Ayudante ---
 (
     echo @echo off
     echo title Actualizando...
     echo echo Finalizando, por favor espera...
     echo timeout /t 1 /nobreak ^> nul
+    rem Reemplaza el archivo viejo con el nuevo
     echo copy /Y "%tempNewScriptFile%" "%~f0" ^> nul
+    rem Limpia los archivos temporales
     echo del "%tempNewScriptFile%" ^> nul
     echo del "%tempVersionFile%" ^> nul
+    rem Vuelve a lanzar el script ya actualizado
     echo start "" "%~f0"
 ) > "%temp%\updater.bat"
 
@@ -213,8 +221,6 @@ del "%tempVersionFile%" >nul 2>&1
 echo.
 pause
 goto MENU
-
-
 
 :SALIR
 echo Saliendo del programa...
